@@ -4,7 +4,7 @@ class Hunter{
         this.canvas = canvas;
         this.posX = this.canvas.width - 150
         this.posY = this.canvas.height / 2
-        this.lives = 5;
+        this.lives = 10;
         this.wpm = 0;
         this.killed = 0;
         this.shooting = false;
@@ -16,7 +16,7 @@ class Hunter{
     draw(){
         // debugger
         if(!this.shooting){
-            console.log('not shooting')
+            // console.log('not shooting')
             this.ctx.drawImage(this.hunterImage,
                 300,250,
                 70, 80,
@@ -24,7 +24,7 @@ class Hunter{
                 70, 80
             )
         }else{
-            console.log('shooting')
+            // console.log('shooting')
             this.ctx.drawImage(this.hunterImage,
                 220, 250,
                 70, 80,
@@ -46,7 +46,7 @@ class Hunter{
     getLives(){
         this.ctx.beginPath();
             this.LifeCount();
-            if (this.lives > 2) {
+            if (this.lives > 4) {
                 this.ctx.fillStyle = "blue";
             } else {
                 this.ctx.fillStyle = "red";

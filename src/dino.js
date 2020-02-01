@@ -10,7 +10,7 @@ class Dino{
         this.DinoImage.src = '/Users/samisherif/Desktop/DynoTypo/public/images/DinoSprite.png'
         this.srcX = 0;
         this.srcY = 0;
-        this.moveX = 2;
+        this.moveX = 10;
         this.moveY = 0
         this.drawDino = this.drawDino.bind(this)
     }
@@ -42,20 +42,20 @@ class Dino{
     goToHunter(){
         if (this.posX > 150) {
             if (this.posY < this.canvas.height / 2) {
-                this.moveY =20;
+                this.moveY =5;
             } else if (this.posY > this.canvas.height / 2) {
-                this.moveY =-10;
+                this.moveY =-5;
             } else {
                 this.dy = 0;
             }
         }
-        // console.log(this.posX)
-        // console.log(this.canvas.width)
-        if(this.posX >= this.canvas.width-300){
-            console.log('hitting here')
-            this.moveX = 0;
-            this.moveY = 0;
-        }
+        // // console.log(this.posX)
+        // // console.log(this.canvas.width)
+        // if(this.posX >= this.canvas.width-300){
+        //     console.log('hitting here')
+        //     this.moveX = 0;
+        //     this.moveY = 0;
+        // }
     }
 
     showWord(){

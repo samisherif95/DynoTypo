@@ -8,31 +8,41 @@
 
 body{
     height: 100vh;
-    /* background-image: url('/Users/samisherif/Desktop/DynoTypo/public/images/finalBackground.jpg'); */
+    background-image: url('/Users/samisherif/Desktop/DynoTypo/public/images/jurassicdino.jpeg');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .title{
     display: flex;
     justify-content: center;
-    /* text-shadow: 2px 2px 5px red ;     */
-    margin: 10px
+    margin: 10px;
 }
+
 .title2{
     display: flex;
     justify-content: center;
     margin: 0;
+    color: yellow;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+
 }
 
 strong{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
 }
 
 .contact{
     position: absolute;
+    padding-top: 10px;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -41,10 +51,16 @@ strong{
     justify-content:space-evenly;
     padding-bottom: 15px;
     margin: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.contact li a{
+    color: white;
 }
 
 #typing-input{
-    font-family: "Roboto Slab";
+    font-family: "Futura";
     color: black;
     position: absolute;
     border: 4px solid blue;
