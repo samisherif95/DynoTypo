@@ -36,7 +36,6 @@ class Dino{
                 this.srcX = 0;
             }
         }
-        // this.ctx.clearRect(this.posX, this.posY, this.canvas.width - 550, this.canvas.height / 2)
     }
 
     goToHunter(){

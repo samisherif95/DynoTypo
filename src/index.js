@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     welcomepage.welcomePageDraw()
     canvas.addEventListener('click', game.startGame)
-    gameLayout.addEventListener('keydown', game.startGame)
+    gameLayout.addEventListener('keypress', game.startGame)
 })

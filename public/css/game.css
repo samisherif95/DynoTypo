@@ -19,17 +19,7 @@ body{
 .title{
     display: flex;
     justify-content: center;
-    margin: 10px;
-}
-
-.title2{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    color: yellow;
-    text-shadow: 2px 2px 4px #000000;
-    font-weight: bold;
-
+    margin: 0px;
 }
 
 strong{
@@ -79,7 +69,7 @@ strong{
 .about{
     background-color: grey;
     height: 200px;
-    width: 80vh;
+    width: 90vh;
     display: flex;
     margin: 0 auto;
     border-radius: 10px;
@@ -87,9 +77,11 @@ strong{
     opacity: 0.7;
 }
 
-.about p{
+.about strong{
     text-align: center;
     font-family: fantasy;
-    font-weight: 900;
+    /* font-weight: 900; */
+    margin: 0;
+    color: yellow;
 }
 

@@ -83,7 +83,7 @@ class Game{
     startGame(){
         this.restartGame();
         this.canvas.removeEventListener('click', this.startGame);
-        this.gameLayout.removeEventListener('keydown', this.startGame);
+        this.gameLayout.removeEventListener('keypress', this.startGame);
         requestAnimationFrame(this.render);
         this.input.focus();
     }
@@ -92,7 +92,7 @@ class Game{
         let start = requestAnimationFrame(this.render)
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
         this.canvas.addEventListener('click', this.input.focus())
-        this.input.addEventListener('keydown', this.dinoActions);
+        this.input.addEventListener('keypress', this.dinoActions);
         this.input.addEventListener('input', this.startTimer);
 
         let fps = 10;
