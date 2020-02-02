@@ -49,17 +49,9 @@ class Dino{
                 this.dy = 0;
             }
         }
-        // // console.log(this.posX)
-        // // console.log(this.canvas.width)
-        // if(this.posX >= this.canvas.width-300){
-        //     console.log('hitting here')
-        //     this.moveX = 0;
-        //     this.moveY = 0;
-        // }
     }
 
     showWord(){
-        // console.log('show word')
         this.ctx.font = "15px Verdana";
         this.ctx.fillStyle = 'white';
         this.ctx.textBaseline = 'middle';

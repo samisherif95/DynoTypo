@@ -3,8 +3,9 @@ import Dictionary from './dictionary'
 import Dino from './dino'
 
 class Game{
-    constructor(ctx,canvas,input){
-        this.ctx = ctx;
+    constructor(ctx,canvas,input,gameLayout){
+        this.gameLayout = gameLayout
+        this.ctx = ctx; 
         this.canvas = canvas;
         this.input = input;
         this.hunter = new Hunter(ctx,canvas);
@@ -16,7 +17,6 @@ class Game{
         this.typingTimer = 0
         this.shootingCounter = 0;
         this.then = Date.now();
-
         //game logic
         this.round = 1;
         this.counter = 0;
@@ -31,8 +31,6 @@ class Game{
     }
 
     startTimer(e) {
-        console.log("hitting here")
-        console.log(this.typingTimer)
         if(this.typingTimer === 0){
             this.typingTimer = Date.now();
         }
@@ -51,7 +49,7 @@ class Game{
     generateDinos(){
         let x = -100;
         let y = Math.floor(Math.random() * (this.canvas.height - 150)) + 50;
-        let randomSpawn = Math.floor(Math.random() * 2.5) + (250 - this.round);
+        let randomSpawn = Math.floor(Math.random() * 2) + (250 - this.round);
         if (this.counter % randomSpawn < this.round) {
             this.dinos.push(new Dino(this.ctx, this.canvas, x, y, this.dict.generateRandomWords(), this.alive));
             this.dinoCount += 1;
@@ -84,6 +82,8 @@ class Game{
 
     startGame(){
         this.restartGame();
+        this.canvas.removeEventListener('click', this.startGame);
+        this.gameLayout.removeEventListener('keydown', this.startGame);
         requestAnimationFrame(this.render);
         this.input.focus();
     }
@@ -104,10 +104,9 @@ class Game{
             this.counter += 10
         }, 1)
 
-        if (this.counter % 10000 === 0) {
+        if (this.counter % 15000 === 0) {
             this.round += 0.5
         }
-        console.log(this.timeCounter)
         if ((this.hunter.killed * 60)/this.timeCounter) {
             this.hunter.wpm = ((this.hunter.killed*60)/this.timeCounter).toFixed(2);
         } else {
@@ -117,10 +116,7 @@ class Game{
         this.generateDinos()
         this.hunter.WPM();
         this.hunter.KillCount()
-        // console.log(this.dinos);
-        // debugger
         for (let i = 0; i< this.dinos.length; i++) {
-            // console.log(dino)
             if (this.dinos[i].alive === true) {
                 if (this.dinos[i].posX < this.canvas.width - 250) {
                     this.dinos[i].draw()

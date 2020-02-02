@@ -14,9 +14,7 @@ class Hunter{
     }
 
     draw(){
-        // debugger
         if(!this.shooting){
-            // console.log('not shooting')
             this.ctx.drawImage(this.hunterImage,
                 300,250,
                 70, 80,
@@ -24,7 +22,6 @@ class Hunter{
                 70, 80
             )
         }else{
-            // console.log('shooting')
             this.ctx.drawImage(this.hunterImage,
                 220, 250,
                 70, 80,
