@@ -1,0 +1,25 @@
+{
+  "name": "dynotypo",
+  "version": "1.0.0",
+  "description": "DynoTypo is a classic speed typing game which generally tests how fast a user can type on his/her keyboard but with a twist. In this variant of the game dinosaurs have broken out of their cages and are killing innocent bystander. Its your job to stay alive as long as possible to save as many civilians as possible and to go down as a legend by killing as many dinos as possible.",
+  "main": "index.js",
+  "dependencies": {
+    "random-words": "^1.1.0",
+    "webpack-cli": "^3.3.10",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samisherif95/DynoTypo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samisherif95/DynoTypo/issues"
+  },
+  "homepage": "https://github.com/samisherif95/DynoTypo#readme"
+}

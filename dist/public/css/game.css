@@ -10,7 +10,7 @@
 
 body{
     height: 100vh;
-    background-image: url('https://github.com/samisherif95/DynoTypo/blob/master/dist/public/images/jurassicdino.jpeg');
+    background-image: url('/Users/samisherif/Desktop/DynoTypo/dist/public/images/jurassicdino.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
