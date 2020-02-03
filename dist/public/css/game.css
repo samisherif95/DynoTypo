@@ -45,7 +45,7 @@ strong{
     margin: 0;
     background-color: black;
     opacity: 0.8;
-    transform: translateY(-50px);
+    transform: translateX(-50px);
 }
 
 .contact li a{
