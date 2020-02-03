@@ -30,6 +30,14 @@ class Game{
         this.startTimer = this.startTimer.bind(this)
     }
 
+    drawMenuBackground() {
+        this.ctx.beginPath();
+        this.ctx.rect(0, 0, this.canvas.width, this.canvas.height);
+        this.ctx.fillStyle = "rgba(0, 0, 0, 0.8)";
+        this.ctx.fill();
+        this.ctx.closePath();
+    }
+
     startTimer(e) {
         if(this.typingTimer === 0){
             this.typingTimer = Date.now();
@@ -161,6 +169,8 @@ class Game{
     gameOver() {
         console.log('you lose');
         this.restartGame();
+        this.canvas.addEventListener('click', this.startGame)
+        this.gameLayout.addEventListener('keypress', this.startGame)
     }
 
     
