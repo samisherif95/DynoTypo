@@ -9,7 +9,7 @@ class Hunter{
         this.killed = 0;
         this.shooting = false;
         this.hunterImage = new Image();
-        this.hunterImage.src = '/Users/samisherif/Desktop/DynoTypo/public/images/hunter.png'
+        this.hunterImage.src = '/Users/samisherif/Desktop/DynoTypo/dist/public/images/hunter.png'
         this.draw = this.draw.bind(this)
     }
 
