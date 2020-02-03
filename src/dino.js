@@ -7,7 +7,7 @@ class Dino{
         this.word = word
         this.alive = alive
         this.DinoImage = new Image();
-        this.DinoImage.src = '/Users/samisherif/Desktop/DynoTypo/public/images/DinoSprite.png'
+        this.DinoImage.src = '/Users/samisherif/Desktop/DynoTypo/dist/public/images/DinoSprite.png'
         this.srcX = 0;
         this.srcY = 0;
         this.moveX = 10;
