@@ -5,7 +5,7 @@ class Welcome{
     }
 
     welcomePageDraw(){
-        console.log('hitting here')
+        // console.log('hitting here')
         this.ctx.beginPath();
             this.ctx.fillStyle = "rgba(140, 43, 43, 0.95)";
             this.ctx.font = 'bold 72px ';

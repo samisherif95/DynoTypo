@@ -20,7 +20,6 @@ class Game{
         //game logic
         this.round = 1;
         this.counter = 0;
-
         this.restartGame = this.restartGame.bind(this)
         this.generateDinos = this.generateDinos.bind(this);
         this.dinoActions = this.dinoActions.bind(this);
@@ -80,6 +79,8 @@ class Game{
         }
         // this.hunter.shooting = false
     }
+
+    
 
     startGame(){
         this.restartGame();
@@ -160,12 +161,10 @@ class Game{
     }
 
     gameOver() {
-        console.log('you lose');
+        // console.log('you lose');
         this.restartGame();
         this.canvas.addEventListener('click', this.startGame)
         this.gameLayout.addEventListener('keypress', this.startGame)
     }
-
-    
-}
+} 
 export default Game

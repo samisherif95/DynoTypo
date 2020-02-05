@@ -58,7 +58,7 @@ class Hunter{
         this.ctx.beginPath();
             this.ctx.fillStyle = "white";
             this.ctx.font = 'bold 18px';
-            this.ctx.fillText(`WPM: ${this.wpm}`, this.canvas.width - 300, 50)
+            this.ctx.fillText(`WPM: ${this.wpm}`, this.canvas.width - 320, 50)
             this.ctx.fill();
         this.ctx.closePath();
     }
