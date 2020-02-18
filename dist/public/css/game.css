@@ -6,7 +6,17 @@
     margin: 0 auto;
     border-radius: 5px;
     opacity: 0.8;
-}   
+}
+
+#muteToggle{
+    color: white;
+    position: absolute;
+    transform: translate(1050px, -40px);
+}
+
+#myAudio{
+    position: absolute;
+}
 
 body{
     height: 100vh;

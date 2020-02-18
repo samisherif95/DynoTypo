@@ -17,9 +17,11 @@ class Game{
         this.typingTimer = 0
         this.shootingCounter = 0;
         this.then = Date.now();
-        //game logic
+        this.audio = new Audio()
+        this.audio.src = './dist/public/audio/DynoTypoMusic.mp3'
         this.round = 1;
         this.counter = 0;
+        this.ToggleVolume = this.ToggleVolume.bind(this);
         this.restartGame = this.restartGame.bind(this)
         this.generateDinos = this.generateDinos.bind(this);
         this.dinoActions = this.dinoActions.bind(this);
@@ -80,10 +82,26 @@ class Game{
         // this.hunter.shooting = false
     }
 
-    
+    ToggleVolume(){
+        let togglevolume = document.getElementById('muteToggle')
+        if(this.audio.volume > 0){
+            this.audio.volume = 0
+            togglevolume.classList.remove('fa-volume-up')
+            togglevolume.classList.add('fa-volume-mute')
+        }else if(this.audio.volume === 0){
+            this.audio.volume = 0.8
+            togglevolume.classList.remove('fa-volume-mute')
+            togglevolume.classList.add('fa-volume-up')
+        }
+    }
 
     startGame(){
         this.restartGame();
+        console.log(this.audio)
+        this.audio.volume = 0.6;
+        this.audio.play();
+        let togglemute = document.getElementById('muteToggle')
+        togglemute.addEventListener('click',this.ToggleVolume)
         this.canvas.removeEventListener('click', this.startGame);
         this.gameLayout.removeEventListener('keypress', this.startGame);
         requestAnimationFrame(this.render);
@@ -106,8 +124,8 @@ class Game{
             this.counter += 10
         }, 1)
 
-        if (this.counter % 15000 === 0) {
-            this.round += 0.5
+        if (this.counter % 20000 === 0) {
+            this.round += 0.35
         }
         if ((this.hunter.killed * 60)/this.timeCounter) {
             this.hunter.wpm = ((this.hunter.killed*60)/this.timeCounter).toFixed(2);
@@ -163,6 +181,8 @@ class Game{
     gameOver() {
         // console.log('you lose');
         this.restartGame();
+        let togglemute = document.getElementById('muteToggle')
+        togglemute.removeEventListener('click')
         this.canvas.addEventListener('click', this.startGame)
         this.gameLayout.addEventListener('keypress', this.startGame)
     }
