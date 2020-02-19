@@ -57,7 +57,6 @@ class Game{
             this.dinoCount += 1;
         }1
     }
-
     dinoActions(e){
         if (e.keyCode === 32 || e.keyCode === 13){
             let value = this.input.value;

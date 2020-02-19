@@ -17,8 +17,11 @@ DynoTypo is a classic speed typing game which generally tests how fast a user ca
 ## Architectures and Technologies
     JavaScript, Canvas, and hosted on github pages
 
-
 ## ScreenShots of Live website
 
-![code snippet](https://github.com/samisherif95/WatchFlix2.0/blob/master/app/assets/images/screenshotCode.png "WatchFlix code")
+![Live demo](https://github.com/samisherif95/DynoTypo/blob/master/dist/public/images/ScreenShotDyno.png "DynoTypo live")
+
+## Code Snippet
+
   
+
