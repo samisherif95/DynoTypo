@@ -22,6 +22,5 @@ DynoTypo is a classic speed typing game which generally tests how fast a user ca
 ![Live demo](https://github.com/samisherif95/DynoTypo/blob/master/dist/public/images/ScreenShotDyno.png "DynoTypo live")
 
 ## Code Snippet
-
-  
+  ![Live demo](https://github.com/samisherif95/DynoTypo/blob/master/dist/public/images/codeSnippet.png "DynoTypo live")
 
