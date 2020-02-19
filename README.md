@@ -2,6 +2,10 @@
 
 DynoTypo is a classic speed typing game which generally tests how fast a user can type on his/her keyboard but with a twist. In this variant of the game dinosaurs have broken out of their cages and are killing innocent bystander. Its your job to stay alive as long as possible to save as many civilians as possible and to go down as a legend by killing as many dinos as possible.
 
+
+### Play me: [DynoTypo](https://samisherif95.github.io/DynoTypo/)
+
+
 ## Functionality & MVPs
     1. Start game on key pressed, avatar loaded and dinos start appearing.
     2. text box where player types in words that appear over dinos head.
@@ -11,15 +15,10 @@ DynoTypo is a classic speed typing game which generally tests how fast a user ca
     1. leaderBoard with top scores, if player beats top score asks for name.
 
 ## Architectures and Technologies
-    JavaScript, Canvas, and hosted on Heroku
+    JavaScript, Canvas, and hosted on github pages
 
 
-## Implementation Timeline
-    Day 1: research in which extra technologies will be needed for this project as well as learning those technologies.
+## ScreenShots of Live website
 
-    Day 2: setting up the project and the getting started on the logic.
-
-    Day 3 -> 5: working on the functions of the project and getting as much as possible done. Also accounting time for all the bugs that will be faced.
-
-    Weekend: Finishing up the final details of the project and deploying it on Heroku for presentation.
-
+![code snippet](https://github.com/samisherif95/WatchFlix2.0/blob/master/app/assets/images/screenshotCode.png "WatchFlix code")
+  
